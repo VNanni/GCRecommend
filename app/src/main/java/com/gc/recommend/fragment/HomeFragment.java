@@ -1,5 +1,6 @@
 package com.gc.recommend.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.gc.recommend.R;
+import com.gc.recommend.activity.BrowseActivity;
 import com.gc.recommend.adapter.HomeViewAdapter;
 import com.gc.recommend.beans.LocalClothBean;
 import com.gc.recommend.utils.LocalClothProvider;
@@ -38,11 +40,17 @@ public class HomeFragment  extends Fragment {
         initData();
         mHomeViewAdapter = new HomeViewAdapter(mClothList);
         mHomeView.setAdapter(mHomeViewAdapter);
+        mHomeViewAdapter.setmItemClickListerner(new HomeViewAdapter.ItemClickListerner() {
+            @Override
+            public void OnItemClick(View v) {
+                Intent toDetailPage = new Intent(getContext(), BrowseActivity.class);
+                startActivity(toDetailPage);
+            }
+        });
     }
 
     private void initData() {
         mLocalClothProvider = new LocalClothProvider(getContext());
         mClothList = mLocalClothProvider.getAll();
-        int a = mClothList.size();
     }
 }

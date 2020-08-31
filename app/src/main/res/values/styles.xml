@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/lightorange</item>
         <item name="colorPrimaryDark">@color/lightorange</item>
@@ -19,6 +19,15 @@
         <item name="android:button">@null</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/bottom_text_color_selector</item>
+    </style>
+
+    <style name="line">
+        <item name="android:background">@color/linecolor</item>
+    </style>
+
+    <style name="line_vertical" parent="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
     </style>
 
 </resources>

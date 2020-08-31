@@ -2,18 +2,22 @@ package com.gc.recommend.beans;
 
 import android.widget.BaseAdapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LocalClothBean extends BaseBean {
     private String mName;
     private int mPrice;
     private int mLocalPic;
-    private String mComment;
+    private List<String> mComment;
 
     public LocalClothBean(int mID, String mName, int mPrice, int mLocalPic, String mComment) {
         super(mID);
         this.mName = mName;
         this.mPrice = mPrice;
         this.mLocalPic = mLocalPic;
-        this.mComment = mComment;
+        this.mComment = new ArrayList<>();
+        this.mComment.add(mComment);
     }
 
     public String getmName() {
@@ -40,11 +44,14 @@ public class LocalClothBean extends BaseBean {
         this.mLocalPic = mLocalPic;
     }
 
-    public String getmComment() {
+    public List<String> getmComment() {
         return mComment;
     }
 
-    public void setmComment(String mComment) {
+    public void setmComment(List<String> mComment) {
         this.mComment = mComment;
+    }
+    public int getCommentCount(){
+        return mComment.size();
     }
 }

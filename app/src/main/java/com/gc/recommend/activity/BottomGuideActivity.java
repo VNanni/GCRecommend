@@ -27,7 +27,7 @@ public class BottomGuideActivity extends AppCompatActivity {
         mTabRadioGroup = findViewById(R.id.tabs_rg);
         mFragmentSparseArray = new SparseArray<>();
         mFragmentSparseArray.append(R.id.home_tab, new HomeFragment());
-        mFragmentSparseArray.append(R.id.settings_tab, new MyFragment());
+        mFragmentSparseArray.append(R.id.my_tab, new MyFragment());
         mTabRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {

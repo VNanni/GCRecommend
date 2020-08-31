@@ -2,5 +2,16 @@
     <string name="app_name">Recommend</string>
     <string name="home">主页</string>
     <string name="my">我的</string>
+    <string name="myheadpic">头像</string>
     <string name="cloth_icn">服装精品</string>
+    <string name="username">大猫</string>
+    <string name="user_order">订单</string>
+    <string name="user_star">收藏</string>
+    <string name="user_shopcar">购物车</string>
+    <string name="user_history">浏览历史</string>
+    <string name="guessyoulike">猜你喜欢</string>
+    <string name="user_height">身高</string>
+    <string name="user_weight">体重</string>
+    <string name="user_bust">胸围</string>
+    <string name="detail_header_pic">穿衣效果</string>
 </resources>

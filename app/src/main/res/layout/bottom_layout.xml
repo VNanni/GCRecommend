@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".activity.BottomGuideActivity"
-    app:cardUseCompatPadding="true">
+    tools:context=".activity.BottomGuideActivity">
 
     <FrameLayout
         android:id="@+id/fragment_container"
@@ -30,7 +28,7 @@
         <View style="@style/Custom.TabRadioButton" />
 
         <RadioButton
-            android:id="@+id/settings_tab"
+            android:id="@+id/my_tab"
             style="@style/Custom.TabRadioButton"
             android:drawableTop="@mipmap/my_icon"
             android:text="@string/my" />
@@ -44,6 +42,5 @@
         android:layout_marginBottom="4dp"
         android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"
-        android:src="@mipmap/publish2"
-        android:contentDescription="TODO" />
+        android:src="@mipmap/publish2" />
 </RelativeLayout>

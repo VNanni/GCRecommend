@@ -7,4 +7,7 @@
     <color name="nonecolor">#00000000</color>
     <color name="lightgray">#9C9C9C</color>
     <color name="orange">#FFC125</color>
+    <color name="white">#FFFFFF</color>
+    <color name="linecolor">#EDEDED</color>
+    <color name="red">#FF0000</color>
 </resources>
