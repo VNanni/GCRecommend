@@ -51,10 +51,10 @@ public class DetailLeftViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         if (holder instanceof DetailHeaderViewHolder){
             ((DetailHeaderViewHolder) holder).mHeaderPic.setImageResource(mGoodsinfo.getmLocalPic());
         }else if(holder instanceof DetailTitleViewHolder){
-            ((DetailTitleViewHolder) holder).mGoodsPrice.setText(mGoodsinfo.getmPrice());
+            ((DetailTitleViewHolder) holder).mGoodsPrice.setText(String.valueOf(mGoodsinfo.getmPrice()));
             ((DetailTitleViewHolder) holder).mGoodsName.setText(mGoodsinfo.getmName());
         }else if(holder instanceof DetailCommentViewHolder){
-            ((DetailCommentViewHolder) holder).mCommentText.setText(mGoodsinfo.getmComment().get(position-sFixCount+1));
+            ((DetailCommentViewHolder) holder).mCommentText.setText(mGoodsinfo.getmComment().get(position-sFixCount));
         }
     }
 

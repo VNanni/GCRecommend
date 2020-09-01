@@ -16,29 +16,26 @@ import com.gc.recommend.adapter.DetailLeftViewAdapter;
 import com.gc.recommend.adapter.DetailRightViewAdapter;
 import com.gc.recommend.staticdata.LocalStaticData;
 
-public class DetailFragment extends Fragment {
+public class DetailLeftFragment extends Fragment {
 
     public RecyclerView mDetailLeftView;
     private DetailLeftViewAdapter mDetailLeftAdapter;
-    public RecyclerView mDetailRightView;
-    private DetailRightViewAdapter mDetailRightAdapter;
+    public LocalStaticData mStaticData;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.detail_fragment, container,false);
+        View view = inflater.inflate(R.layout.detail_left_fragment, container,false);
         mDetailLeftView = view.findViewById(R.id.detail_recyclerview);
-        mDetailRightView = view.findViewById(R.id.cloth_select_recyclerview);
 
         initDetailView();
         return view;
     }
 
     private void initDetailView() {
-        mDetailLeftAdapter = new DetailLeftViewAdapter(LocalStaticData.getClothList().get(0));
+        mStaticData = LocalStaticData.getInstance();
+
+        int a = LocalStaticData.getClothList().size();
+        mDetailLeftAdapter = new DetailLeftViewAdapter(mStaticData.getClothList().get(0));
         mDetailLeftView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
         mDetailLeftView.setAdapter(mDetailLeftAdapter);
-
-        mDetailRightAdapter = new DetailRightViewAdapter(LocalStaticData.getClothList());
-        mDetailRightView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-        mDetailRightView.setAdapter(mDetailRightAdapter);
     }
 }
